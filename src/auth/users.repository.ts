@@ -23,6 +23,7 @@ export class UsersRepository extends Repository<User> {
       username,
       password: hashedPassword,
     });
+    
     try {
       await this.save(user);
     } catch (error) {
